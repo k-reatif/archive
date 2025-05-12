@@ -1,0 +1,25 @@
+// select comps in projectPanel first, then run the script.
+
+{
+  let a = app.project.selection;
+  let b = parseFloat(prompt("Enter the duration to add in seconds:", "10"));
+
+  app.beginUndoGroup("Add Duration and Extend Layers");
+
+  for (let c = 0; c < a.length; c++) {
+    let d = a[c];
+    let e = d.duration;
+    let f = e + b;
+
+    d.duration = f;
+
+    for (let g = 1; g <= d.numLayers; g++) {
+      let h = d.layer(g);
+      if (h.outPoint >= e) {
+        h.outPoint = f;
+      }
+    }
+  }
+
+  app.endUndoGroup();
+}
