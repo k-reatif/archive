@@ -1,16 +1,16 @@
-# Compiled class file
+# Compiled class file (likely not relevant for AE/AI scripts, so kept but might be removable)
 *.class
 
-# Log file
+# Log file (generic log exclusion, probably still useful)
 *.log
 
-# BlueJ files
-*.ctxt
+# BlueJ files (very specific to a Java IDE, likely not needed)
+# *.ctxt
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# Mobile Tools for Java (J2ME) (definitely not relevant)
+# .mtj.tmp/
 
-# Package Files #
+# Package Files (could be relevant if you package your scripts, so kept)
 *.jar
 *.war
 *.nar
@@ -19,6 +19,35 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+# virtual machine crash logs (Java specific, unlikely for AE/AI scripting)
+# hs_err_pid*
+# replay_pid*
+
+# After Effects specific temporary files and caches
+*.aep.autosave/
+AE_Cache/
+aerender_log.txt
+[Project Name]_Backup*/ # Example of excluding backup folders
+
+# Illustrator specific temporary files and caches
+*.ai.autosave
+Illustrator Prefs
+AdobeFnt*.lst # Adobe font list files
+TemporaryItems/
+
+# macOS specific files that can clutter a repository
+.DS_Store
+._*
+
+# Node.js specific if you use it for any related tooling
+node_modules/
+package-lock.json
+
+# Python specific if you use it for any related tooling
+__pycache__/
+*.pyc
+
+# General temporary files created by operating systems or editors
+*.tmp
+*.swp
+*.bak
